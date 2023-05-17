@@ -8,9 +8,14 @@ app.geometry("800x600")
 app.title("Click Counter Button")
 
 
+count = 0
+def clicked(): #
+    global count
+    count = count + 1
+    click_count.configure(text=f'Button was clicked {count} times')
 
 
-click_button = tk.Button(app, text="Click Here", font=('arial', 18), bg='white', height=7, width=20, command="")
+click_button = tk.Button(app, text="Click Here", font=('arial', 18), bg='white', height=7, width=20, command=clicked)
 click_button.place(relx=.5, rely=.33, anchor='center')
 
 
